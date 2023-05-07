@@ -17,11 +17,11 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    ) 
-    rgb(var(--background-start-rgb));
+  background-color: rgb(209, 240, 209);
+}
+
+.contactForm{
+  margin: 30px;
+  width: 100%;
+  padding-right: 60px;
 }
