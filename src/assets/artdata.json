@@ -1,5 +1,17 @@
-[{"name": "The Crow",
+[
+    {"name": "The Crow",
 "pic": "/images/thecrow.jpg",
-"desc": "Crows surround a sign displaying an ominous message."
+"desc": "Crows surround a sign displaying an ominous message.",
+"style": "Digital"
+},
+{"name": "The Observer",
+"pic": "/images/The_Observer.jpg",
+"desc": "My Life With The Thrill Kill Kult album fan art.",
+"style": "Digital"
+},
+{"name": "Stars",
+"pic": "/images/stars.jpg",
+"desc": "Digital painting of stars in a purple sky.",
+"style": "Digital"
 }
 ]

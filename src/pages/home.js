@@ -8,9 +8,9 @@ import Art from './/../assets/artdata.json';
 
 function Display(item) {
     return(
-<div>
+
     <div className = 'defaultArt'>
-    <h4 className='defaultArtTxt'>{item.name}</h4>
+    <h3 className='defaultArtTxt'>{item.name}</h3>
 <Image className = 'defaultArtImg'
     src={item.pic} // Route of the image file
     height={144} // Desired size with correct aspect ratio
@@ -18,7 +18,7 @@ function Display(item) {
     alt={item.name}
   />
   </div>
-</div>
+
 
     )
 }
@@ -28,8 +28,9 @@ export default function Homepage(props) {
 
     console.log(Art)
     return <div>
-
+<div className='defaultArtContainer'>
 
 {Art.map(Display)}
+</div>
     </div>
   }

@@ -35,16 +35,28 @@ body {
   border:rgb(26, 28, 44);
   border-width: 4px;
   border-style: ridge;
+  align-self: center;
+  margin-top: 10px;
 }
 
 .defaultArtTxt{
-  text-align: center;
+  align-self: center;
+  margin-top: 10px;
+  font-weight: bold;
+
 }
 
 .defaultArt{
   display: flex;
+  /* justify-content: center; */
+  align-items:flex-start;
+  flex-direction: column;
+  
 }
 
 .defaultArtContainer{
-  
+  display: flex;
+  flex-wrap: wrap;
+
+
 }
