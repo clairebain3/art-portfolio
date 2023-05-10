@@ -20,8 +20,31 @@ body {
   background-color: rgb(209, 240, 209);
 }
 
+.header {
+  background-color: rgb(209, 240, 209);
+}
+
 .contactForm{
   margin: 30px;
   width: 100%;
   padding-right: 60px;
+}
+
+.defaultArtImg{
+  margin: 30px;
+  border:rgb(26, 28, 44);
+  border-width: 4px;
+  border-style: ridge;
+}
+
+.defaultArtTxt{
+  text-align: center;
+}
+
+.defaultArt{
+  display: flex;
+}
+
+.defaultArtContainer{
+  
 }
