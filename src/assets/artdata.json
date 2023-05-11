@@ -1,17 +1,32 @@
 [
-    {"name": "The Crow",
+{"name": "The Crow",
 "pic": "/images/thecrow.jpg",
 "desc": "Crows surround a sign displaying an ominous message.",
-"style": "Digital"
+"style": "Digital",
+"id": 1
 },
 {"name": "The Observer",
 "pic": "/images/The_Observer.jpg",
 "desc": "My Life With The Thrill Kill Kult album fan art.",
-"style": "Digital"
+"style": "Digital",
+"id": 2
 },
 {"name": "Stars",
 "pic": "/images/stars.jpg",
 "desc": "Digital painting of stars in a purple sky.",
-"style": "Digital"
+"style": "Digital",
+"id": 3
+},
+{"name": "BFFs",
+"pic": "/images/BFFs.jpg",
+"desc": "A woman and her cat",
+"style": "Painting",
+"id": 4
+},
+{"name": "Primaries",
+"pic": "/images/Primaries.jpg",
+"desc": "A collection of three paintings. Each one contains exactly 2 of the three primary colors (red, yellow, blue).",
+"style": "Painting",
+"id": 5
 }
 ]
