@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Art from './/../assets/artdata.json';
-
+import Link from 'next/link';
 
 // import Pic from './/../assets/thecrow.jpg';
 
@@ -13,7 +13,7 @@ function Display(item) {
     return(
 
     <div className = 'defaultArt'>
-    <h3 className='defaultArtTxt'>{item.name}</h3>
+    <Link className='defaultArtTxt' href={`/art/${item.id}`}>{item.name}</Link>
 <Image className = 'defaultArtImg'
     src={item.pic} // Route of the image file
     height={144} // Desired size with correct aspect ratio

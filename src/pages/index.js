@@ -94,7 +94,7 @@ export default function Home() {
         <main>
 
       <div>
-      <p>{renderPage()}</p>
+      <div>{renderPage()}</div>
       </div>
     </main>
     </div>
