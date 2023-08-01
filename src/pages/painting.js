@@ -15,6 +15,7 @@ function Display(item) {
     <div className = 'defaultArt'>
     <Link className='defaultArtTxt' href={`/art/${item.id}`}>{item.name}</Link>
 <Image className = 'defaultArtImg'
+    key={item.name}
     src={item.pic} // Route of the image file
     height={144} // Desired size with correct aspect ratio
     width={144} // Desired size with correct aspect ratio
