@@ -5,7 +5,7 @@ import Link from 'next/link';
 // import Pic from './/../assets/thecrow.jpg';
 
 // import Pic from './../assets/thecrow.jpg'
-const fibers = Art.filter(it => it.style === 'Fiber');
+const others = Art.filter(it => it.style === 'Other');
 
 function Display(item) {
    
@@ -29,14 +29,14 @@ function Display(item) {
 }
 
 
-export default function Fiber(props) {
+export default function Other(props) {
 
 
     // console.log(Art)
     return <div>
 <div className='defaultArtContainer'>
 
-{fibers.map(Display)}
+{others.map(Display)}
 </div>
     </div>
   }
