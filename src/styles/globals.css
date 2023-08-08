@@ -1,7 +1,7 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
-
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -14,7 +14,7 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   background-color: rgb(209, 240, 209);
@@ -59,4 +59,19 @@ body {
   flex-wrap: wrap;
 
 
+}
+
+.foot{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: brown;
+  font-size: small;
+  justify-content: center;
+  margin-top: 5%;
+
+}
+
+.link{
+  margin: 3px;
 }

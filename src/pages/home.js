@@ -38,16 +38,11 @@ function Display(item) {
   />
 
 <Infomodal
-      // let [show, setShow] = useState(false);
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
-                // buttonName="btn"
+
                 handleClose ={handleClose}
                 show={show}
                 modalTitle={item.name}
-                // modalFunction="add"
                 modalInformation={item.desc}
-                // onClickInfo="onclick"
               />
 
   </div>
