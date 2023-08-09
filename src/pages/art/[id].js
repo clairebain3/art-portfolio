@@ -1,30 +1,66 @@
-// // import { useRouter } from 'next/router';
-// // import React, {useState}  from 'react';
-// import { useParams } from 'react-router-dom';
-// import Art from './/../../assets/artdata.json';
-// //  console.log(Art)
-// export default function Page() {
-//     const { myId } = useParams()
-// //     const router = useRouter();
-//     // let [myId, setMyId] = useState(router.query.id); 
+// none of this page is working yet, can remove to get site working
+// import { GetStaticProps, GetStaticPaths  } from 'next';
+import { useRouter } from 'next/router';
+import path from 'path';
+import fs from 'fs/promises';
+import { Artifika } from 'next/font/google';
 
-//     const myArt = Art.find(it => it.id ==  myId)
-//     console.log(myArt & "here it is")
-// //     console.log(router.query.id)
-//     console.log(myArt.id)
+async function getData() {
+    const filePath = path.join(process.cwd(), 'src/assets', 'artdata.json');
+    const fileData = await fs.readFile(filePath);
+    const data = JSON.parse(fileData.toString());
 
-//   return <p>Post: {myArt.myId}</p>;
-// }
+    return data;
+  }
 
-
-export async function generateStaticParams() {
-  const posts = await fetch('https://...').then((res) => res.json())
- 
-  return posts.map((post) => ({
-    id: post.id,
-  }))
+  export const getStaticProps = async (context) => {
+    const itemID = context.params?.id;
+    const data = await getData();
+    console.log(data[0].id)
+    const foundItem = data.find((item) => item.id === itemID);
+   // the problem is here
+    if (!foundItem) {
+      return {
+        props: { hasError: true },
+      }
+  }
+  
+  return {
+    props: {
+      specificArtData: foundItem
+    }
+  }
 }
 
-export default function Page({ params }) {
-  return <div>My Post: {params.id}</div>
-}
+export const getStaticPaths = async () => {
+    const data = await getData();
+    const pathsWithParams = data.map((foundItem) => ({ params: { id: toString(foundItem.id) }}))
+// console.log(foundItem.name)
+    return {
+        paths: pathsWithParams,
+        fallback: true
+    }
+  }
+
+  function projectPage(props) {
+      const router = useRouter();
+    
+      if (props.hasError) {
+        console.log(props)
+        return <h1>Error - please try another parameter</h1>
+      }
+    
+      if (router.isFallback) {
+          return <h1>Loading...</h1>
+      }
+    
+      return (
+        <div>
+          <h1>{props.specificArtData.name}</h1>
+          <p>{props.specificArtData.description}</p>
+          <a href={props.specificArtData.link}>More Information here (link)</a>
+        </div>
+      )
+    }
+    
+    export default projectPage;
