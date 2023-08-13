@@ -34,12 +34,12 @@ export default function Home() {
   const handlePageChange = (page) => setCurrentPage(page);
   return (
 
-       <div> 
+       <div > 
 
 <header>
-            <nav class="navbar navbar-expand-lg  header">
+            <nav class="navbar navbar-expand-lg darkFallTheme">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Art by Claire</a>
+    <p class="darkFallTheme" >Art by Claire</p>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,36 +50,36 @@ export default function Home() {
           href="#home"
           onClick={() => handlePageChange('Homepage')}
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Homepage' ? 'nav-link active' : 'nav-link'}
+          // If it is, we set the current page to 'darkFallTheme-active', otherwise we set it to 'darkFallTheme'
+          className={currentPage === 'Homepage' ? 'darkFallTheme' : 'bloodOrange'}
         >Home</a>
         <a
           href="#digital"
           onClick={() => handlePageChange('Digital')}
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Digital' ? 'nav-link active' : 'nav-link'}
+          // If it is, we set the current page to 'darkFallTheme-active', otherwise we set it to 'darkFallTheme'
+          className={currentPage === 'Digital' ? 'darkFallTheme' : 'bloodOrange'}
         >Digital Art</a>
         <a
           href="#painting"
           onClick={() => handlePageChange('Painting')}
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Painting' ? 'nav-link active' : 'nav-link'}
+          // If it is, we set the current page to 'darkFallTheme-active', otherwise we set it to 'darkFallTheme'
+          className={currentPage === 'Painting' ? 'darkFallTheme' : 'bloodOrange'}
         >Painting</a>
         <a
           href="#other"
           onClick={() => handlePageChange('Other')}
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Other' ? 'nav-link active' : 'nav-link'}
+          // If it is, we set the current page to 'darkFallTheme-active', otherwise we set it to 'darkFallTheme'
+          className={currentPage === 'Other' ? 'darkFallTheme' : 'bloodOrange'}
         >Other</a>
         <a
           href="#Contact"
           onClick={() => handlePageChange('Contact')}
           // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+          // If it is, we set the current page to 'darkFallTheme-active', otherwise we set it to 'darkFallTheme'
+          className={currentPage === 'Contact' ? 'darkFallTheme' : 'bloodOrange'}
         >Contact</a>
         
       </div>
@@ -93,7 +93,7 @@ export default function Home() {
 
 
         
-        <main>
+        <main class="lightFallTheme">
 
       <div>
       <div>{renderPage()}</div>

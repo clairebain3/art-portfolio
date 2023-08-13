@@ -16,13 +16,32 @@
   }
 } */
 
-body {
-  background-color: rgb(209, 240, 209);
+.lightFallTheme {
+  background-color: rgb(238, 229, 212);
+  color: forestgreen;
+  /* opacity: 0.3; */
 }
 
-.header {
-  background-color: rgb(209, 240, 209);
+.lightFallTheme a {
+  color:forestgreen;
 }
+
+.darkFallTheme {
+  background-color: forestgreen;
+  color: rgb(238, 229, 212);
+}
+
+.bloodOrange {
+  color:orangered;
+}
+
+/* body {
+  background-color: rgb(209, 240, 209);
+} */
+
+/* .header {
+  background-color: rgb(209, 240, 209);
+} */
 
 .contactForm{
   margin: 30px;
