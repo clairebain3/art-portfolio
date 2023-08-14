@@ -21,7 +21,9 @@
   color: forestgreen;
   /* opacity: 0.3; */
 }
-
+.bgColor {
+  background-color: rgb(238, 229, 212);
+}
 .lightFallTheme a {
   color:forestgreen;
 }
@@ -29,10 +31,21 @@
 .darkFallTheme {
   background-color: forestgreen;
   color: rgb(238, 229, 212);
+  padding: 5px;
 }
 
 .bloodOrange {
   color:orangered;
+  padding: 5px;
+}
+
+.navText {
+  padding: 10px;
+  margin-right: 5px;
+}
+.navMenu {
+  display: flex;
+  justify-content: end;
 }
 
 /* body {

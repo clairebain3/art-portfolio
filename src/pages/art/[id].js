@@ -1,4 +1,4 @@
-// none of this page is working yet, can remove to get site working
+
 // import { GetStaticProps, GetStaticPaths  } from 'next';
 import { useRouter } from 'next/router';
 import path from 'path';
@@ -16,13 +16,13 @@ async function getData() {
   export const getStaticProps = async (context) => {
     const itemID = context.params?.id;
     const data = await getData();
-    console.log(data[0].id)
-    const foundItem = data.find((item) => item.id === itemID);
-   // the problem is here
+    console.log(data, "here is the data", itemID)
+    const foundItem = data.find((item) => item.id == itemID);
     if (!foundItem) {
       return {
         props: { hasError: true },
       }
+     
   }
   
   return {
@@ -57,8 +57,7 @@ export const getStaticPaths = async () => {
       return (
         <div>
           <h1>{props.specificArtData.name}</h1>
-          <p>{props.specificArtData.description}</p>
-          <a href={props.specificArtData.link}>More Information here (link)</a>
+          <p>{props.specificArtData.desc}</p>
         </div>
       )
     }
