@@ -8,11 +8,12 @@ import Other from './other';
 import Digital from './digital';
 import Contact from './contact';
 import Homepage from './home';
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-
+  const router = useRouter()
   const [currentPage, setCurrentPage] = useState('Home');
 
   const renderPage = () => {
@@ -98,7 +99,7 @@ export default function Home() {
       <div>{renderPage()}</div>
       </div>
     </main>
-    <Footer />
+    <Footer class = "lightFallTheme" />
     </div>
 
   )

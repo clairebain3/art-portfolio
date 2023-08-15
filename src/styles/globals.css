@@ -39,6 +39,11 @@
   padding: 5px;
 }
 
+.darkRed {
+  color:maroon;
+  padding: 5px;
+}
+
 .navText {
   padding: 10px;
   margin-right: 5px;
@@ -69,6 +74,17 @@
   border-style: ridge;
   align-self: center;
   margin-top: 10px;
+  border-color: forestgreen;
+}
+
+.activeArtImg{
+  margin: 30px;
+  border:rgb(26, 28, 44);
+  border-width: 4px;
+  border-style: ridge;
+  align-self: center;
+  margin-top: 10px;
+  border-color: orangered;
 }
 
 .defaultArtTxt{
