@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import path from 'path';
 import fs from 'fs/promises';
 import { Artifika } from 'next/font/google';
+import Header from '../header';
 
 async function getData() {
     const filePath = path.join(process.cwd(), 'src/assets', 'artdata.json');
@@ -55,7 +56,9 @@ export const getStaticPaths = async () => {
       }
     
       return (
+        
         <div>
+          <Header/>
           <h1>{props.specificArtData.name}</h1>
           <p>{props.specificArtData.desc}</p>
         </div>

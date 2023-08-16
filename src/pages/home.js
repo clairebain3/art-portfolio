@@ -36,6 +36,10 @@ function Display(item) {
     const handleClose = () => setShow(false);
     let [active, setActive] = useState(false);
 const setActiveImg = () => setActive(true);
+
+const renderArtPage = () => {
+    return <projectPage />;
+  }
 // const imgClass = this.state.isHovered ? "pulse animated" : "";
     return(
 
