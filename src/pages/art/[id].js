@@ -1,5 +1,7 @@
 
 // import { GetStaticProps, GetStaticPaths  } from 'next';
+import Image from 'next/image';
+// import Art from './/../assets/artdata.json';
 import { useRouter } from 'next/router';
 import path from 'path';
 import fs from 'fs/promises';
@@ -59,8 +61,16 @@ export const getStaticPaths = async () => {
         
         <div>
           <Header/>
-          <h1>{props.specificArtData.name}</h1>
-          <p>{props.specificArtData.desc}</p>
+          <h1 class = "lightFallTheme">{props.specificArtData.name}</h1>
+          <p class = "lightFallTheme">{props.specificArtData.desc}</p>
+          {/* <Image className={hovered ? 'activeArtImg' : 'defaultArtImg'} style={{cursor:'pointer'}}
+    // key={props.specificArtData.name}
+    src={props.specificArtData.pic} // Route of the image file
+    // height={144} // Desired size with correct aspect ratio
+    // width={144} // Desired size with correct aspect ratio
+    // alt={props.specificArtData.name}
+    // onClick={handleClick}
+  /> */}
         </div>
       )
     }
